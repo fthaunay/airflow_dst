@@ -1,0 +1,19 @@
+[2024-12-01T02:36:47.784+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: init_order.create_postgres_conn manual__2024-12-01T02:36:44.649919+00:00 [queued]>
+[2024-12-01T02:36:47.818+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: init_order.create_postgres_conn manual__2024-12-01T02:36:44.649919+00:00 [queued]>
+[2024-12-01T02:36:47.818+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-12-01T02:36:47.867+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): create_postgres_conn> on 2024-12-01 02:36:44.649919+00:00
+[2024-12-01T02:36:47.877+0000] {standard_task_runner.py:60} INFO - Started process 1444 to run task
+[2024-12-01T02:36:47.882+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'init_order', 'create_postgres_conn', 'manual__2024-12-01T02:36:44.649919+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/init_order.py', '--cfg-path', '/tmp/tmpkpntk3zf']
+[2024-12-01T02:36:47.893+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask create_postgres_conn
+[2024-12-01T02:36:47.917+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-01T02:36:47.984+0000] {task_command.py:423} INFO - Running <TaskInstance: init_order.create_postgres_conn manual__2024-12-01T02:36:44.649919+00:00 [running]> on host d047790ecdd5
+[2024-12-01T02:36:48.201+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='init_order' AIRFLOW_CTX_TASK_ID='create_postgres_conn' AIRFLOW_CTX_EXECUTION_DATE='2024-12-01T02:36:44.649919+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-01T02:36:44.649919+00:00'
+[2024-12-01T02:36:48.203+0000] {logging_mixin.py:188} INFO - Session created
+[2024-12-01T02:36:48.204+0000] {logging_mixin.py:188} INFO - Connections listed
+[2024-12-01T02:36:48.233+0000] {logging_mixin.py:188} INFO - Connection already exists
+[2024-12-01T02:36:48.236+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-12-01T02:36:48.256+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=init_order, task_id=create_postgres_conn, execution_date=20241201T023644, start_date=20241201T023647, end_date=20241201T023648
+[2024-12-01T02:36:48.312+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-01T02:36:48.378+0000] {taskinstance.py:3280} INFO - 2 downstream tasks scheduled from follow-on schedule check

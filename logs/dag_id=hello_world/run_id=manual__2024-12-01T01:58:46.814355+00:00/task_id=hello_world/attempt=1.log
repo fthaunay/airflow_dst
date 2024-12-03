@@ -1,0 +1,37 @@
+[2024-12-01T01:58:52.720+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hello_world.hello_world manual__2024-12-01T01:58:46.814355+00:00 [queued]>
+[2024-12-01T01:58:52.739+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hello_world.hello_world manual__2024-12-01T01:58:46.814355+00:00 [queued]>
+[2024-12-01T01:58:52.739+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-12-01T01:58:52.765+0000] {taskinstance.py:2191} INFO - Executing <Task(DockerOperator): hello_world> on 2024-12-01 01:58:46.814355+00:00
+[2024-12-01T01:58:52.774+0000] {standard_task_runner.py:60} INFO - Started process 131 to run task
+[2024-12-01T01:58:52.778+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'hello_world', 'hello_world', 'manual__2024-12-01T01:58:46.814355+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/hello_world.py', '--cfg-path', '/tmp/tmpr1_f2bcn']
+[2024-12-01T01:58:52.782+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask hello_world
+[2024-12-01T01:58:52.804+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-12-01T01:58:52.865+0000] {task_command.py:423} INFO - Running <TaskInstance: hello_world.hello_world manual__2024-12-01T01:58:46.814355+00:00 [running]> on host d047790ecdd5
+[2024-12-01T01:58:52.994+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='hello_world' AIRFLOW_CTX_TASK_ID='hello_world' AIRFLOW_CTX_EXECUTION_DATE='2024-12-01T01:58:46.814355+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-01T01:58:46.814355+00:00'
+[2024-12-01T01:58:53.016+0000] {docker.py:359} INFO - Starting docker container from image hello-world
+[2024-12-01T01:58:53.021+0000] {docker.py:367} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-12-01T01:58:53.595+0000] {docker.py:429} INFO - Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+[2024-12-01T01:58:53.833+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=hello_world, task_id=hello_world, execution_date=20241201T015846, start_date=20241201T015852, end_date=20241201T015853
+[2024-12-01T01:58:53.881+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-01T01:58:53.907+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
